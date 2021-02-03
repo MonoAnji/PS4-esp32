@@ -314,12 +314,18 @@ ps4_sensor_t ps4_parse_packet_sensor( uint8_t *packet )
 {
     ps4_sensor_t ps4_sensor;
 
-/*     const uint16_t int_offset = 0x200;
+    const uint16_t int_offset = 0x200;
+
+    //TODO: actual values.
+    int ps4_packet_index_sensor_accelerometer_x = 0;
+    int ps4_packet_index_sensor_accelerometer_y = 0;
+    int ps4_packet_index_sensor_accelerometer_z = 0;
+    int ps4_packet_index_sensor_gyroscope_z = 0;
 
     ps4_sensor.accelerometer.x = (packet[ps4_packet_index_sensor_accelerometer_x] << 8) + packet[ps4_packet_index_sensor_accelerometer_x+1] - int_offset;
     ps4_sensor.accelerometer.y = (packet[ps4_packet_index_sensor_accelerometer_y] << 8) + packet[ps4_packet_index_sensor_accelerometer_y+1] - int_offset;
     ps4_sensor.accelerometer.z = (packet[ps4_packet_index_sensor_accelerometer_z] << 8) + packet[ps4_packet_index_sensor_accelerometer_z+1] - int_offset;
-    ps4_sensor.gyroscope.z     = (packet[ps4_packet_index_sensor_gyroscope_z]     << 8) + packet[ps4_packet_index_sensor_gyroscope_z+1]     - int_offset; */
+    ps4_sensor.gyroscope.z     = (packet[ps4_packet_index_sensor_gyroscope_z]     << 8) + packet[ps4_packet_index_sensor_gyroscope_z+1]     - int_offset;
 
     return ps4_sensor;
 

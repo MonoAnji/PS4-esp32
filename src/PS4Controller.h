@@ -1,8 +1,7 @@
 #ifndef PS4Controller_h
 #define PS4Controller_h
 
-#include <inttypes.h>
-#include "Arduino.h"
+#include <cinttypes>
 
 extern "C" {
   #include  "ps4.h"
@@ -13,9 +12,9 @@ class PS4Controller {
     public:
         typedef void(*callback_t)();
 
-        ps4_t data;
-        ps4_event_t event;
-        ps4_cmd_t output;
+        ps4_t data{};
+        ps4_event_t event{};
+        ps4_cmd_t output{};
 
         PS4Controller();
 
